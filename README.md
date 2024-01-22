@@ -6,9 +6,32 @@ first we need to install some pakages
 mongoose --> npm i mongoose
 react icons --> react-icons
 
+1.Create UI
+2.Create a new project in Mongodb atlas
+3.Create a new database && Copy userpassword
+4.get link from Overviwe->connect->Vscode 
+5.write code for connecting to mongodb
+// In libs/mongodb will write code to connect to mongodb
+6.now we need to create a model(schema) --> structure 
+// models folder
+7.Write code for crud operation
+--> create a new folder api 
+--> create another folder topics
+--> create file with name(must) routes.js
+
+8.use postman to check api end points
+
+
+
+
+we should have same name for app routing 
+
+
+
 ## Getting Started
 
 First, run the development server:
+
 
 ```bash
 npm run dev
