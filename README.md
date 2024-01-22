@@ -15,7 +15,7 @@ react icons --> react-icons
 6.now we need to create a model(schema) --> structure 
 // models folder
 7.Write code for crud operation
---> create a new folder api 
+--> create a new folder api in app folder
 --> create another folder topics
 --> create file with name(must) routes.js
 

@@ -1,18 +1,19 @@
 // here we write code to create a schema
 
-import mongoose,{Schema} from "mongoose";
+import mongoose, { Schema } from "mongoose";
 
 const topicSchema = new Schema(
     {
-        title:String,
-        description:String,
-    },{
-        timestamps:true,
+        title: String,
+        description: String,
+    },
+    {
+        timestamps: true,
     }
 );
 
 
 // phele hai to vo use karlo varna create kardo
-const Topic = mongoose.model.Topic || mongoose.model("Topic",topicSchema);
+const Topic = mongoose.model.Topic || mongoose.model("Topic", topicSchema);
 
 export default Topic;
