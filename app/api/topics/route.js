@@ -12,10 +12,20 @@ export async function POST(request) {
 
 
     // create the topic
-    await Topic.create({ title, description })
+    await Topic.create({ title, description });
 
     // return a next response
 
-    return NextResponse.json({ message: "Topic Created" }, { status: 201 })
+    return NextResponse.json({ message: "Topic Created" }, { status: 201 });
 
+}
+
+
+// get
+export async function GET(){
+    await connectMongoDB();
+    // saare topics varible my store karva lenge
+    const topics = await Topic.find();
+    return NextResponse.json({topics});
+    
 }
