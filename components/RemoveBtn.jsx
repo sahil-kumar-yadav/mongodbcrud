@@ -9,7 +9,7 @@ function RemoveBtn({id}) {
         const confiremed = confirm('Are you sure ? ');
 
         if(confiremed){
-            await fetch(`http://localhost:3000/api/topics?id=${id}`,{
+            await fetch(`https://mongodbcrud-liart.vercel.app/api/topics?id=${id}`,{
                 method: "DELETE",
             });
         }

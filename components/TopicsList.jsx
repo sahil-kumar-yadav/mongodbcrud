@@ -8,7 +8,7 @@ const getTopics = async () => {
     try {
         // by defult next js store cache so if we update the data we won't get updated data
 
-        const res = await fetch("http://localhost:3000/api/topics", {
+        const res = await fetch("https://mongodbcrud-liart.vercel.app/api/topics", {
             cache: "no-store",
         });
         // check if its working or not
@@ -39,7 +39,7 @@ export default async function TopicsList() {
                         <div>{t.description}</div>
                     </div>
 
-                    <div  key={2} className="flex gap-2">
+                    <div key={2} className="flex gap-2">
                         <RemoveBtn id={t._id} />
                         <Link href={`/editTopic/${t._id}`}>
                             <HiPencilAlt size={24} />
