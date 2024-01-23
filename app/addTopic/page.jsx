@@ -38,7 +38,8 @@ function AddTopic() {
             });
 
             if(res.ok){
-                router.push('/');
+                // router.push('/');
+                router.replace("/")
             }
             else{
                 throw new Error("Failed to create a topic");
