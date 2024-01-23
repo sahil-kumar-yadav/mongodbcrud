@@ -22,10 +22,22 @@ export async function POST(request) {
 
 
 // get
-export async function GET(){
+export async function GET() {
     await connectMongoDB();
     // saare topics varible my store karva lenge
     const topics = await Topic.find();
-    return NextResponse.json({topics});
-    
+    return NextResponse.json({ topics });
 }
+
+// delete 
+
+export async function DELETE(request){
+    // to delete we need to send id of topic
+    const id = request.nextUrl.searchParams.get("id");
+    await connectMongoDB();
+    await Topic.findByIdAndDelete(id);
+    return NextResponse.json({message:"Topic deleted"},{status:200});
+
+}
+
+// to update we will use dynamic route

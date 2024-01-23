@@ -17,11 +17,11 @@ react icons --> react-icons
 7.Write code for crud operation
 --> create a new folder api in app folder
 --> create another folder topics
---> create file with name(must) routes.js
+--> create file with name(must) route.js
 
 8.use postman to check api end points
 
-
+9. connecting backend and fronend
 
 
 we should have same name for app routing 

@@ -14,6 +14,6 @@ const topicSchema = new Schema(
 
 
 // phele hai to vo use karlo varna create kardo
-const Topic = mongoose.model.Topic || mongoose.model("Topic", topicSchema);
+const Topic = mongoose.models.Topic || mongoose.model("Topic", topicSchema);
 
 export default Topic;
