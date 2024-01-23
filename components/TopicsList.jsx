@@ -34,12 +34,12 @@ export default async function TopicsList() {
                     key={t._id}
                     className="p-4 border border-slate-300 my-3 flex justify-between gap-5 items-start"
                 >
-                    <div>
+                    <div key={2}>
                         <h2 className="font-bold text-2xl">{t.title}</h2>
                         <div>{t.description}</div>
                     </div>
 
-                    <div className="flex gap-2">
+                    <div  key={2} className="flex gap-2">
                         <RemoveBtn id={t._id} />
                         <Link href={`/editTopic/${t._id}`}>
                             <HiPencilAlt size={24} />
