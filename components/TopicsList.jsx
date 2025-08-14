@@ -1,17 +1,13 @@
 import Link from "next/link";
 import RemoveBtn from "./RemoveBtn";
-import { HiPencilAlt } from "react-icons/hi"
+import { HiPencilAlt } from "react-icons/hi";
 
-
-// first we fill fetch the data from monogodb
+// Fetch data from MongoDB API with cache disabled
 const getTopics = async () => {
     try {
-        // by defult next js store cache so if we update the data we won't get updated data
-
         const res = await fetch("https://mongodbcrud-liart.vercel.app/api/topics", {
             cache: "no-store",
         });
-        // check if its working or not
 
         if (!res.ok) {
             throw new Error("Failed to fetch topics");
@@ -23,9 +19,14 @@ const getTopics = async () => {
     }
 };
 
-
 export default async function TopicsList() {
-    const { topics } = await getTopics();
+    const data = await getTopics();
+
+    if (!data || !data.topics) {
+        return <p className="text-red-500">Failed to load topics.</p>;
+    }
+
+    const { topics } = data;
 
     return (
         <>
@@ -34,12 +35,12 @@ export default async function TopicsList() {
                     key={t._id}
                     className="p-4 border border-slate-300 my-3 flex justify-between gap-5 items-start"
                 >
-                    <div key={2}>
+                    <div>
                         <h2 className="font-bold text-2xl">{t.title}</h2>
                         <div>{t.description}</div>
                     </div>
 
-                    <div key={2} className="flex gap-2">
+                    <div className="flex gap-2">
                         <RemoveBtn id={t._id} />
                         <Link href={`/editTopic/${t._id}`}>
                             <HiPencilAlt size={24} />
@@ -50,4 +51,3 @@ export default async function TopicsList() {
         </>
     );
 }
-
