@@ -1,4 +1,4 @@
-```md
+
 # 🚀 Next.js 15 CRUD App — Topics Manager
 
 A **modern, animated, and responsive** CRUD web application built with **Next.js 15 (App Router)**, **MongoDB + Mongoose**, and **Tailwind CSS v4**.  
@@ -145,8 +145,4 @@ This project is **MIT Licensed** — free to use, modify, and share.
 
 Built to demonstrate how to create a **robust, modern, and animated CRUD app** with the latest **Next.js** and **Tailwind CSS v4**, while keeping code clean and maintainable.
 
----
 
-```
-
----
